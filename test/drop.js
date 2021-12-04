@@ -21,6 +21,9 @@ describe('drop(), Nominal Input', function() {
         assert.deepEqual(drop([]), []); 
         assert.deepEqual(drop([],2), []); 
     });
+    it('Null array', function() {
+        assert.deepEqual(drop(null, [])); 
+    });
 });
 
 // erroneous 
@@ -29,7 +32,6 @@ describe('drop(), Erroneous Input', function() {
         expect(function(){drop('a')}).to.throw()
         expect(function(){drop(1)}).to.throw()
         expect(function(){drop("String")}).to.throw()
-        expect(function(){drop(null)}).to.throw()
         expect(function(){drop(function(){return 0})}).to.throw()
     });
     it('Should throw when second input is not zero or a positive integer', function() {

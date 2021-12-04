@@ -15,6 +15,9 @@ describe('map(), Nominal Input', function() {
     it('Valid array and empty function', function() {
         assert.deepEqual(map([3,4], function(){}), [undefined]); 
     });
+    it('Null array and valid', function() {
+        assert.deepEqual(map(null, foo), []); 
+    });
 });
 
 // erroneous 

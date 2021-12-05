@@ -5,7 +5,7 @@ import {expect} from "chai"
 
 
 // nominal
-describe('add()', function() {
+describe('add(), Nominal Input', function() {
     it('Positive integers', function() {
         assert.equal(add(2,3), 5);
     });
@@ -46,7 +46,7 @@ describe('add()', function() {
 
 
 // erroneous
-describe('add()', function() {
+describe('add(), Erroneous Input', function() {
     it('Should throw when one argument is a char', function() {
         expect(function(){add('a',3.0)}).to.throw(TypeError)
         expect(function(){add(3.0,'a')}).to.throw(TypeError)

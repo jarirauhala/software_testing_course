@@ -58,4 +58,7 @@ describe('divide(), Erroneous Input', function() {
         expect(function(){divide(5,[1])}).to.throw()
         expect(function(){divide([1],5)}).to.throw()
     });
+    it('Should throw when divider is zero', function() {
+        expect(function(){divide(5,0)}).to.throw()
+    });
 });
